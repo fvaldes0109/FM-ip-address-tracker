@@ -88,7 +88,7 @@ button:active {
 }
 
 hr {
-    margin: 10px 20px;
+    margin: 10px 30px;
     border-color: rgba(250, 236, 236, 0.323);
 }
 
@@ -106,7 +106,7 @@ hr {
 .info-value {
     font-weight: 500;
     color: var(--very-dark-gray);
-    font-size: 23px;
+    font-size: 27px;
     padding: 0;
     margin: 10px 0;
 }
