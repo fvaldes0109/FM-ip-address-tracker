@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+    --very-dark-gray: hsl(0, 0%, 17%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+body {
+    margin: 0;
+    font-family: 'Rubik';
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-image: url('../images/pattern-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    height: 250px;
+    box-shadow: 0 10px 15px 10px rgba(142, 140, 140, 0.22);
+}
+
+h1 {
+    margin: 0;
+    color: white;
+}
+
+.input-field {
+    margin: 30px;
+    display: flex;
+}
+
+input {
+    font-size: 18px;
+    padding: 20px;
+    width: 400px;
+    border: none;
+    border-radius: 15px 0 0 15px;
+    color: var(--very-dark-gray);
+    font-weight: bold;
+}
+
+input::placeholder {
+    font-weight: normal;
+}
+
+input:focus-visible {
+    outline: 0;
+}
+
+button {
+    border: none;
+    width: 60px;
+    background-color: black;
+    border-radius: 0 15px 15px 0;
+    transition: background-color 0.1s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--very-dark-gray);
+}
+
+button:active {
+    background-color: var(--dark-gray);
+}
+
+.info {
+    display: flex;
+    background-color: white;
+    max-width: 1000px;
+    width: 90%;
+    position: absolute;
+    transform: translate(0, -50%);
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px 5px rgba(142, 140, 140, 0.22);
+    padding: 30px;
+}
+
+hr {
+    margin: 10px 20px;
+    border-color: rgba(250, 236, 236, 0.323);
+}
+
+.info-slot {
+    width: 100%;
+}
+
+.info-type {
+    font-size: 13px;
+    color: var(--dark-gray);
+    font-weight: bold;
+    margin: 0;
+}
+
+.info-value {
+    font-weight: 500;
+    color: var(--very-dark-gray);
+    font-size: 23px;
+    padding: 0;
+    margin: 10px 0;
+}
