@@ -5,15 +5,22 @@
     --dark-gray: hsl(0, 0%, 59%);
 }
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
+    padding: 0;
+}
+
+body {
     font-family: 'Rubik';
+    display: flex;
+    flex-direction: column;
 }
 
 main {
     position: relative;
-    display: flex;
-    justify-content: center;
+    padding: 0;
+    flex-grow: 1;
 }
 
 header {
@@ -78,13 +85,16 @@ button:active {
     background-color: white;
     max-width: 1000px;
     width: 90%;
+    top: 0;
+    left: 50%;
     position: absolute;
-    transform: translate(0, -50%);
+    transform: translate(-50%, -50%);
     justify-content: space-between;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 20px 5px rgba(142, 140, 140, 0.22);
     padding: 30px;
+    z-index: 1000;
 }
 
 hr {
@@ -109,4 +119,9 @@ hr {
     font-size: 27px;
     padding: 0;
     margin: 10px 0;
+}
+
+#map {
+    /* Occupy full height */
+    height: 100%;
 }

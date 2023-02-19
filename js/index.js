@@ -49,7 +49,13 @@ const getGeolocation = async (fromInput) => {
         targetElements[2].innerHTML = `UTC ${data.location.timezone}`;
         targetElements[3].innerHTML = data.isp;
         
+        var lat = data.location.lat;
+        var lng = data.location.lng;
+    
+        createMap(lat, lng);
+
     } catch (error) {
+
         console.log(error);
         
         // Default values
@@ -58,8 +64,28 @@ const getGeolocation = async (fromInput) => {
         targetElements[1].innerHTML = 'Error fetching data';
         targetElements[2].innerHTML = 'Error fetching data';
         targetElements[3].innerHTML = 'Error fetching data';
+
+        createMap();
     }
-    
+}
+
+const createMap = (lat = 43.5789, lng = -79.6583) => {
+
+    var map = L.map('map').setView([lat, lng], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    }).addTo(map);
+
+    var blackIcon = L.icon({
+        iconUrl: './images/icon-location.svg',
+
+        iconSize:     [50, 60], // size of the icon
+        iconAnchor:   [25, 60], // point of the icon which will correspond to marker's location
+    });
+
+    L.marker([lat, lng], { icon: blackIcon }).addTo(map);
 }
 
 window.addEventListener('load', init);
