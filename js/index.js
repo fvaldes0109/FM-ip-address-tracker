@@ -37,7 +37,7 @@ const getGeolocation = async (fromInput) => {
     else url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_RPwwuRa3at32ZKgoegEmoWb4FBBQl&domain=${query}`;
 
     try {
-        throw new Error('Dummy error');
+        // throw new Error('Dummy error');
 
         var response = await fetch(url);
         var data = await response.json();
