@@ -90,7 +90,6 @@ button:active {
     position: absolute;
     transform: translate(-50%, -50%);
     justify-content: space-between;
-    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 10px 20px 5px rgba(142, 140, 140, 0.22);
     padding: 30px;
