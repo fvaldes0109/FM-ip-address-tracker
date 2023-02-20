@@ -37,7 +37,7 @@ const getGeolocation = async (fromInput) => {
     else url = `https://geo.ipify.org/api/v2/country,city?apiKey=at_RPwwuRa3at32ZKgoegEmoWb4FBBQl&domain=${query}`;
 
     try {
-        // throw new Error('Dummy error');
+        throw new Error('Dummy error');
 
         var response = await fetch(url);
         var data = await response.json();
@@ -71,7 +71,7 @@ const getGeolocation = async (fromInput) => {
 
 const createMap = (lat = 43.5789, lng = -79.6583) => {
 
-    var map = L.map('map').setView([lat, lng], 13);
+    var map = L.map('map', { zoomControl: false }).setView([lat, lng], 13);
 
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
